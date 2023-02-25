@@ -1,0 +1,132 @@
+@font-face {
+	font-family: 'Metropolis';
+	src: url('metropolis.semi-bold.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Inter';
+	src: url('Inter-Medium.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+:root{
+	--blå: rgb(20, 30, 140);
+	--ljusblå: rgb(40, 60, 200);
+	--röd: rgb(227, 21, 30);
+}
+
+body{
+	margin: 0;
+	color: white;
+	font-family: 'Inter';
+}
+
+hr{
+	border: 1px solid white;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Metropolis';
+}
+
+h1{
+	font-size: 60px;
+}
+h2{
+	font-size: 60px;
+	text-align: center;
+	margin: 30px 0 10px 0;
+}
+h3{
+	font-size: 35px;
+	margin-bottom: 10px;
+}
+h4{
+	font-size: 40px;
+}
+h5{
+	font-size: 30px;
+}
+h6{
+	font-size: 20px;
+}
+
+a{
+	color: var(--röd);
+}
+
+#info, #bol, #mg{
+	margin: 50px 10% 0 10%;
+}
+
+#abc{
+	margin: 0 10%;
+	width: 80%;
+}
+
+header{
+	background-color: var(--blå);
+	width: min(100%, 1200px);
+	display: block;
+	margin: 0 auto;
+	padding: 20px 10px;
+}
+
+#loggaBild{
+	width: 90%;
+	display: block;
+	margin: 0 auto;
+}
+
+article{
+	background-color: var(--ljusblå);
+	width: min(100%, 1200px);
+	display: block;
+	margin: 0 auto;
+	padding: 20px 10px;
+}
+
+#visa{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+#produkt{
+	width: max(45%, 500px);
+	margin: 0 auto;
+	display: inline-block;
+	float: right;
+}
+#produkt>img{
+	width: 100%;
+}
+
+#knappbyt{
+	border: 5px solid var(--blå);
+	background-color: var(--lblå);
+	width: 80%;
+	height: 70px;
+	margin: 10px auto;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+#knappbyt:hover{
+	border: 5px solid white;
+}
+
+#knappbyt:active{
+	background-color: white;
+	border: 5px solid var(--blå);
+}
+
+#textvänster{
+	margin: 50px 10% 0 10%;
+	max-width: 400px;
+	display: inline-block;
+}

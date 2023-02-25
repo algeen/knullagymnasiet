@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Knullagymnasiet-hoodie</title>
+	<link rel="stylesheet" href="s.css"/>
+	<meta charset="UTF-8">
+</head>
+
+<body>
+	<header>
+		<img id="loggaBild" src="knulla.png" />
+	</header>
+	<article>
+		<div id="info">
+			<hr><h2 class="ingenTopp">Information</h2><hr>
+			<div>
+				<h3>Pris: 325kr</h3>
+				<p>De trycks hemma hos mig vilket hjälpte att få ner priset</p>
+			</div>
+			<div>
+				<h3>Kvalité: Asbra</h3>
+				<p>Trots priset är inte det här en tunn hoodie från Kina med påklistrat papper som tryck. Har ni ett syskon som eller känner någon som gick idrottssatsningen (årskull 03 och äldre) är det likadana hoodiesar som de har. Exakt samma. Så man kommer kunna använda den här hoodien, det är ingen engångsgrej. 60&deg; tvätt och torktumling går.</p>
+			</div>
+			<div>
+				<h3>Storlekar: XS, S, M, L*, XL, XXL</h3>
+				<p>Jag är 175@65kg och kommer ta S. Storleksguide finns <a href="https://justhoodsbyawdis.com/products/JH003">här</a>. *För närvarande är L slut i lager där det beställs ifrån men det jobbas på.</p>
+			</div>
+			<div>
+				<h3>Tryck bak: Knullagymnasiet</h3>
+				<p>Halva grejen ju!</p>
+			</div>
+			<div>
+				<h3>Undertext: Börjar eller slutar</h3>
+				<p>Vanligtvis är kullas motto "det är här resan börjar", men eftersom jag är så rolig finns där möjlighet att ha "det är här resan slutar" istället. Välj själv, vill man bara passa in i mängden kan be att få det som majoriteten tar.</p>
+			</div>
+			<div>
+				<h3>Framsida: Namn och klass</h3>
+				<p>Tanken är att efterlikna idrottssatsnings-hoodiesarna, och de har två rader, namn och klubb. Namn ska helst förbli orörd, men nedre raden är relativt fri. Teknikprogrammet, Höganäs Gymnastikförening, Pias änglar eller liknande (inga n-ord eller liknande...) är tillåtet.</p>
+			</div>
+			<div>
+				<h3>Sista beställningsdag: Söndag 5 mars</h3>
+				<p>Sen på måndagen beställs hoodiesarna.</p>
+			</div>
+		</div>
+		<div id="bol">
+			<hr><h2>Beställning och leverans</h2><hr>
+			<p>Beställning sker via Swish. I meddelandet ska det stå följande: Storlek, Namn, Klass/klubb. Ex.: S, Daniel Ekman, Teknikprogrammet. Om inte allt får plats så skicka resten av texten på sms.</p>
+			<p>Leveranstid är inte helt klart, men räkna med minst två veckor. Först måste beställningstiden gå ut, sen ska hoodiesarna beställas och komma och sen måste de tryckas. Räkna med minst två veckor från sista beställningsdag, max fyra. Förhoppningsvis innan påsklovet!</p>
+			<p>Uthämtning sker i skolan, jag har med alla när alla är klara och mer specifik plats kommer att meddelas.</p>
+		</div>
+		<div id="abc">
+			<hr><h2>Utseende</h2><hr>
+		</div>
+		<div id="visa">
+			<div class="mitten" id="textvänster">
+				<p>Här kan man titta på en preview av hoodien. Går inte design så ber om ursäkt för suddigheten, den är inte så i verkligheten! Där finns tre bilder att kolla på och man växlar genom att klicka på nästa bild-knappen.</p>
+				<button id="knappbyt" onClick="byt()">Nästa bild</button>
+			</div>
+			<div class="mitten" id="produkt">
+				<img class="produktbild" style="display: none;" id="slutar" src="knulla_bak_slutar.png" alt="Baksidan av hoodien, 'det är här resan slutar'" />
+				<img class="produktbild" style="display: none;" id="börjar" src="knulla_bak_börjar.png" alt="Baksidan av hoodien, 'det är här resan börjar'" />
+				<img class="produktbild" style="display: inline-block;" id="fram" src="knulla_fram.png" alt="Framsidan av hoodien"/>
+			</div>
+			<script>
+			function byt(){
+				börjar = document.getElementById("börjar");
+				slutar = document.getElementById("slutar");
+				fram = document.getElementById("fram");
+				
+				if(fram.style.display == "inline-block"){
+					börjar.style.display = "inline-block";
+					slutar.style.display = "none";
+					fram.style.display = "none";
+				}else if(börjar.style.display == "inline-block"){
+					börjar.style.display = "none";
+					slutar.style.display = "inline-block";
+					fram.style.display = "none";
+				}else{
+					börjar.style.display = "none";
+					slutar.style.display = "none";
+					fram.style.display = "inline-block";
+				}
+			}
+			</script>
+		</div>
+		<!--div id="mg">
+			<h2>Meddelande-generator</h2>
+			<hr>
+			
+			<p>Storlek:</p>
+				<input type="radio" name="storlek" value="xs">
+				<label>XSmall</label><br>
+				<input type="radio" name="storlek" value="s">
+				<label>Small</label><br>
+				<input type="radio" name="storlek" value="m">
+				<label>Medium</label><br>
+				<input type="radio" name="storlek" value="l">
+				<label>Large</label><br>
+				<input type="radio" name="storlek" value="xl">
+				<label>XLarge</label><br>
+				<input type="radio" name="storlek" value="xxl">
+				<label>XXLarge</label><br>
+				
+			<p>Namn (rad ett framsida):</p>
+			<input id="namn">
+			
+			<p>Klass, klubb, gäng (rad två framsida):</p>
+			<input id="klass">
+			
+			<p>Undertext:</p>
+				<input type="radio" name="undertext" value="1">
+				<label>Det är här resan <b>börjar</b></label><br>
+				<input type="radio" name="undertext" value="2">
+				<label>Det är här resan <b>slutar</b></label><br>
+				<input type="radio" name="undertext" value="3">
+				<label>Det som flest väljer</label>
+			
+			<br><br>
+			<button onClick="kör()">Generera</button>
+			
+			<p id="meddelande">Här hamnar meddelandet</p>
+			<button onClick="kopiera()">Kopiera texten</button>
+			
+			<script>
+			function kör(){
+				var meddelande = '';
+				meddelande += document.querySelector('input[name="storlek"]:checked').value;
+				meddelande += document.querySelector('input[name="undertext"]:checked').value;
+				meddelande += ' ';
+				meddelande += document.getElementById('namn').value;
+				meddelande += '|';
+				meddelande += document.getElementById('klass').value;
+				document.getElementById('meddelande').innerHTML = meddelande;
+			}
+			
+			function kopiera() {
+				var text = document.getElementById('meddelande').innerHTML;
+				text.select();
+				text.setSelectionRange(0, 99);
+				navigator.clipboard.writeText(text.value);
+			}
+
+			</script>
+		</div-->
+	</article>
+</body>
+</html>
